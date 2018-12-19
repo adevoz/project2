@@ -1,0 +1,50 @@
+<p>
+  
+  
+  <input #myId type="text" />
+
+  <input [(ngModel)] ="testing" type="text" />
+  
+  <select #myConsole type="text" class="custom-select">
+    <option selected>Select Console</option>
+    <option value="49">Xbox One</option>
+    <option value="12">Xbox 360</option>
+    <option value="11">Xbox</option>
+    <option value="48">PS4</option>
+    <option value="9">PS3</option>
+    <option value="8">PS2</option>
+    <option value="7">PS1</option>
+    <option value="4">N64</option>
+    <option value="19">SNES</option>
+    <option value="18">NES</option>
+  </select>
+
+  <button (click)="getTesting(myId.value, myConsole.value)">click</button>
+  {{testing}}
+
+
+  {{name}}
+</p>
+
+<div>
+  {{game[0].name}}
+</div>
+
+<div>
+  {{game[0].rating}}
+</div>
+
+<div>
+  {{game[0].cover.url}}
+</div>
+
+<div>
+  <img src = "https:{{game[0].cover.url}}">
+  <iframe src="https://www.youtube.com/embed/{{game[0].videos[0].video_id}}"
+   width="560" height="315" frameborder="0" allowfullscreen></iframe>
+</div>
+
+ 
+
+ 
+  
