@@ -1,0 +1,28 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- DataSource Information -->
+		<property name="hibernate.connection.url">
+		jdbc:postgresql://postgres.cjk7zjrxbarc.us-east-2.rds.amazonaws.com:5432/postgres?
+		</property>
+		<!-- Dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<!-- Driver -->
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<!-- Settings -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.id.new_generator_mappings">false</property>
+		<!-- Mapped Classes -->
+		<mapping class="com.revature.util.SessionUtil"/>
+		<mapping class="com.revature.domain.GameTradeUser"/>
+		<mapping class="com.revature.domain.Games"/>
+		<mapping class="com.revature.domain.GameQualityCheck"/>
+		<mapping class="com.revature.domain.Trade"/>
+		<!-- <mapping class="com.revature.service.GamesService"/>
+		<mapping class="com.revature.service.HomeService"/>
+		<mapping class="com.revature.service.LoginService"/> -->
+	</session-factory>
+</hibernate-configuration>
